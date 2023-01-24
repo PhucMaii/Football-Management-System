@@ -10,18 +10,19 @@
 |email_address|email address|Stores email address of the club|varchar(64)|
 |mobile_number|phone number|stores the phone number of the club|int(11)||
 |club_points|team points|stores the points the team has|int(3)|
+|club_financial|club's money|stores how much does the club currently have|int(11)|
 
 
-### 2. PLATERS 
+### 2. PLAYERS 
 |Field Name|Canonical Name|Description|Data Type|Key|Source|
 |--|--|--|--|--|--|
 |player_id|player ID|stores the id of a player|varchar(10)|PK|
 |contract_id|contract id|stores the contract id of a player|int(10)||FK|
 |player_stats_id|player's statistic id|stores the id of statistic of a player|int(10)||FK|
-|club_name|Club name|stores the name of the club which this player is playing for||FK|
+|club_name|Club name|stores the name of the club which this player is playing for|varchar(20)||FK|
 |first_name|player's first name|stores the first name of the player|varchar(10)|||
 |last_name|player's last name|stores the last name of the player|varchar(10)|
-|mobile_number|phone number|stores the phone number of a player||
+|mobile_number|phone number|stores the phone number of a player|int(11)|
 
 
 
@@ -29,7 +30,8 @@
 |Field Name|Canonical Name|Description|Data Type|Key|Source|
 |--|--|--|--|--|--|
 |coach_id|coach ID|stores the id of the coach|varchar(10)|PK|
-|coach_team|coach team|stores the team name that this coach is belong to|varchar(20)|
+|contract_id|contract ID|stores the id of coach's contract||
+|coach_team|coach team|stores the team name that this coach is belong to|varchar(20)||FK|
 |coach_first_name|coach's first name|stores the first name of the coach|varchar(10)||
 |coach_last_name|coach's last name|stores the last name of the coach|varchar(10)||
 |title|title|stores the title of the coach in a team|varchar(11)||
@@ -39,17 +41,7 @@
 ### 4. FACILITIES 
 |Field Name|Canonical Name|Description|Data Type|Key|Source|
 |--|--|--|--|--|--|
-|fooball_pitches|2|gives details  of pitches owned by a club |
-|gym|2| gives details about the gym |
-|SWIMMING  COMPLEX|4| |
-|MEETING ROOMS|9| 
-
-
-### 5. EQUIPMENTS
-
-|CLEATS|80| gives details about the CLEATS |
-|--|--|--|
-|SHIN_GUARDS|70| gives details about the SHIN_GUARDS  |
-|balls|70| gives details about the balls   |
-|water_bottles|70| gives details about the water_bottles |
-|uniform|280| gives details about the jersey,training kits etc |
+|facilities_id|facilities or equipment id|stores an id of facilities or equipment of a team|int(5)|PK|
+|gym_rooms|gym training rooms|stores number of training rooms that club has|int(2)||
+|recovery_center|recovery center|stores number of recovery centers that club has|int(2)||
+|training_ground_name|training field's name|stores a training fields of a club|varchar(20)||
