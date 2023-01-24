@@ -3,51 +3,43 @@
 ###  FOOTBALL DATABASE MANEGEMENT SYSTEM
 
 ### 1. CLUB 
-|Field Name|Example of Data|Comments (Description)|
-|--|--|--|
-|Employee_ID|87908767||
-|First_name|Cosmas ||
-|Last_name|Otoyo||
-|Title|Assistant_coach||
-|Department|medical|takes care of medical details for players|
-|Address|'16789 108 ST'|includes address of all employees|
-|City|Vancouver|city where wmployee lives |
-|Postal_adress |v3t5l8|postal adress of eployee|
-|Email_address|includes email address of all employees|
-|Mobile_number| 2364537698| mandatory to have one |
+|Field Name|Canonical Name|Description|Data Type|Key|Source|
+|--|--|--|--|--|--|
+|club_name|Club Name|Stores the name of the club|varchar(20)|PK|
+|city|City|Stores the city where the club hosts|varchar(20)||
+|email_address|email address|Stores email address of the club|varchar(64)|
+|mobile_number|phone number|stores the phone number of the club|int(11)||
+|club_points|team points|stores the points the team has|int(3)|
 
 
 ### 2. PLATERS 
-|Field Name|Example of Data|Comments (Description)|
-|--|--|--|
-|Employee_ID|87908767||
-|First_name|Cosmas ||
-|Last_name|Otoyo||
-|Title|Assistant_coach||
-|Department|medical|takes care of medical details for players|
-|Address|'16789 108 ST'|includes address of all employees|
-|City|Vancouver|city where wmployee lives |
-|Postal_adress |v3t5l8|postal adress of eployee|
-|Email_address|includes email address of all employees|
-|Mobile_number| 2364537698| mandatory to have one |
-|points| 18 | |
-|rebounds|78|postal adress of eployee|
-|assists|26|
-|championships|2| |
+|Field Name|Canonical Name|Description|Data Type|Key|Source|
+|--|--|--|--|--|--|
+|player_id|player ID|stores the id of a player|varchar(10)|PK|
+|contract_id|contract id|stores the contract id of a player|int(10)||FK|
+|player_stats_id|player's statistic id|stores the id of statistic of a player|int(10)||FK|
+|club_name|Club name|stores the name of the club which this player is playing for||FK|
+|first_name|player's first name|stores the first name of the player|varchar(10)|||
+|last_name|player's last name|stores the last name of the player|varchar(10)|
+|mobile_number|phone number|stores the phone number of a player||
 
 
 
 ### 3. COACH
-|games_won|2|gives number of games the coach has won in his career|
-|--|--|--|
-|games_lost|6| |
-|awards|4| |
+|Field Name|Canonical Name|Description|Data Type|Key|Source|
+|--|--|--|--|--|--|
+|coach_id|coach ID|stores the id of the coach|varchar(10)|PK|
+|coach_team|coach team|stores the team name that this coach is belong to|varchar(20)|
+|coach_first_name|coach's first name|stores the first name of the coach|varchar(10)||
+|coach_last_name|coach's last name|stores the last name of the coach|varchar(10)||
+|title|title|stores the title of the coach in a team|varchar(11)||
 
 
 
 ### 4. FACILITIES 
+|Field Name|Canonical Name|Description|Data Type|Key|Source|
+|--|--|--|--|--|--|
 |fooball_pitches|2|gives details  of pitches owned by a club |
-|--|--|--|
 |gym|2| gives details about the gym |
 |SWIMMING  COMPLEX|4| |
 |MEETING ROOMS|9| 
