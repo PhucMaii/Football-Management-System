@@ -21,6 +21,7 @@
 |contract_id|contract id|stores the contract id of a player|int(10)||FK|
 |player_stats_id|player's statistic id|stores the id of statistic of a player|int(10)||FK|
 |club_name|Club name|stores the name of the club which this player is playing for|varchar(20)||FK|
+|player_price|Price of the player|stores the money to be able to buy this player|int(11)||
 |first_name|player's first name|stores the first name of the player|varchar(10)|||
 |last_name|player's last name|stores the last name of the player|varchar(10)|
 |position|player's position|stores the position that player plays|varchar(20)|||
