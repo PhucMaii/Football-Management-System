@@ -122,3 +122,37 @@
 |red_id|red card ID|stores red card id|int(3)|PK|
 |match_id|Match ID|stores match id|int(3)||FK|
 |player_id|player ID|stores player id|int(3)||FK|
+
+### 13. Stadium
+|Field Name|Canonical Name|Description|Data Type|Key|Source|
+|--|--|--|--|--|--|
+|stadium_name|stadium name|stores a name of the stadium|varchar(20)|PK||
+|city|name of the city|stores the city where the stadium is placed|varchar(20)||
+|capacity|Capacity of a stadium|stores how much people can the stadium be capable|int(7)||
+
+### 14.Transfer Market
+|Field Name|Canonical Name|Description|Data Type|Key|Source|
+|--|--|--|--|--|--|
+|transaction_id|Transaction ID|stores an ID for the transaction|int(3)|PK|
+|player_id|player ID|take an id of the player in the transfer market|varchar(10)||FK|
+|player_old_team|player's team in the current season|take an id of this player's old team to get this team's information|varchar(40)||FK|
+|player_new_team|player's desired team or team wants to get this player|take an id of this player's new team to get this team's information|varchar(40)||FK|
+
+
+### 15. Contract
+|Field Name|Canonical Name|Description|Data Type|Key|Source|
+|--|--|--|--|--|--|
+|contract_id|contract ID|stores the |int(7)|PK||
+|employer|Employer|stores the employer name for this contract|varchar(20)|||
+|start_date|Starting hiring date|stores the day this contract signed|date||
+|ebd_date|Ending hiring date|stores the day this contract finished|date||
+|salary|Salary|sotres the base salary this person get for this contract|int(10)|||
+
+
+### 16. Events
+|Field Name|Canonical Name|Description|Data Type|Key|Source|
+|--|--|--|--|--|--|
+|event_name|Event name|stores the name of the event|varchar(20)|PK||
+|sponsor|Sponsor name|stores the name of the sponsor for this event|varchar(20)|||
+|prizes|Prizes|this will stores how much money will a player receives for his prizes|int(10)|
+|player_id|player ID|take an id of the player to get its information|varchar(10)||FK|
