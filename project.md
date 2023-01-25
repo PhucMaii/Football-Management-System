@@ -87,7 +87,7 @@
 ### 8. Player Statistics
 |Field Name|Canonical Name|Description|Data Type|Key|Source
 |--|--|--|--|--|--|
-|player_id|Player ID|stores an id of a player|varchar(10)||FK|
+|stats_id|Statistic ID|stores an id of this statistic|int(10)|PK||
 |red_card|Red Card|numbers of red card that this player have received|int(2)||
 |yellow_card|yellow Card|numbers of yellow card that this player have received|int(2)||
 |goals|Goals|numbers of goals that this player have scored|int(4)|||
