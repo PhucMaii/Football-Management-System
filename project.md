@@ -10,6 +10,9 @@
 |email_address|email address|Stores email address of the club|varchar(64)|
 |mobile_number|phone number|stores the phone number of the club|int(11)||
 |club_points|team points|stores the points the team has|int(3)|
+|club_winning_match|winning match|stores the numbers of winning match of that team|int(2)||
+|club_losing_match|losing match|stores the numbers of losing match of that team|int(2)||
+|club_drawing_match|drawing match|stores the numbers of drawing match of that team|int(2)||
 |club_financial|club's money|stores how much does the club currently have|int(11)|
 
 
