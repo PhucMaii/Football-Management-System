@@ -25,6 +25,7 @@
 |club_name|Club name|stores the name of the club which this player is playing for|varchar(20)||FK|
 |first_name|player's first name|stores the first name of the player|varchar(10)|||
 |last_name|player's last name|stores the last name of the player|varchar(10)|
+|position|player's position|stores the position that player plays|varchar(20)|||
 |mobile_number|phone number|stores the phone number of a player|int(11)|
 
 
