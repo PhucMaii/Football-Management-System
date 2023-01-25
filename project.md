@@ -6,6 +6,7 @@
 |Field Name|Canonical Name|Description|Data Type|Key|Source|
 |--|--|--|--|--|--|
 |club_name|Club Name|Stores the name of the club|varchar(20)|PK|
+|facilities_id|Facilities ID|stores the facilities information of the club|int(5)||FK|
 |city|City|Stores the city where the club hosts|varchar(20)||
 |email_address|email address|Stores email address of the club|varchar(64)|
 |mobile_number|phone number|stores the phone number of the club|int(11)||
