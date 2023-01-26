@@ -26,7 +26,7 @@
 |nationality|Argentina||
 |club name|Manchester City||
 |contract id|2|this is the foreign key for this player's contract|
-|award id|5|
+|award id|5|this is the FK for the award that player has|
 
 ### 3. Coach (Zach)
 |Field Name|Examples of Data|Comments|
@@ -35,8 +35,8 @@
 |first name|Jose|
 |last name|Mourinho|
 |title|Head Coach|
-|contract id|3|
-|club name| Arsenal|
+|contract id|3|this is the foreign key for this player's contract|
+|club name| Arsenal|name of the team this coach belongs to|
 
 ### 4. Facilitities (Zach)
 |Field Name|Examples of Data|Comments|
@@ -56,9 +56,9 @@
 |away team|Arsenal|
 |stadium|Stamford Bridge|
 |result|2-0|
-|referee id|3|
+|referee id|3|stores the referee information for the match|
 
-### 6. Referee
+### 6. Referee (Bin)
 |Field Name|Examples of Data|Comments|
 |--|--|--|
 |referee id| 2|
@@ -68,13 +68,13 @@
 |contract id|3|
 |nationality|USA|
 
-### 7. Leaderboard
+### 7. Leaderboard (Bin)
 |Field Name|Examples of Data|Comments|
 |--|--|--|
 |team rank|1st|
 |team name| Arsenal
 
-### 8. Player Stats
+### 8. Player Stats (Bin)
 |Field Name|Examples of Data|Comments|
 |--|--|--|
 |stats id|4|
@@ -83,7 +83,47 @@
 |goals|4|
 |assist|3|
 
+### 9. Stadium (Terry)
+|Field Name|Example of Data|Comments(Description)|
+|--|--|--|
+|stadium_name|Old Trafford|Stores the name of a stadium|
+|city|Manchester|Stores the location of the stadium|||
+|capacity|74.310|Store the capacity of the stadium|||
 
+
+
+### 10.Transfer Market (Terry)
+|Field Name|Example of Data|Comments(Description)|
+|--|--|--|
+|player_id|1|Stores the number of id of a player|
+|transaction_id|2|Stores the number of id of trasaction|
+|new_team|Manchester United|Stores the name of the team which a player come to|
+|last_team|Manchester City|Stores the name of the old team which a player has played for||
+|transfer_fee|100,000,000 euro|Stores the total fee of the transfer that the new team have to pay for the old team of the player they recruit||
+
+
+
+
+### 11. Contract (Terry)
+|Field Name|Example of Data|Comments(Description)
+|--|--|--|
+|contract_id|3|Stores the number of id of the contract|
+|employer|Erik ten Hag|Stores the name of the employer||
+|start_date|Jannuary 26, 2023| Stores the time when the contract start||
+|end_date|Jannuary 26, 2024|Stores the time when the contract end||
+|salary|10,000,000 euro|Store the salary of a player from the contract||
+
+
+
+
+
+### 12. Events ( Terry)
+|Field Name|Example of Data|Comments(Description)|
+|--|--|--|
+|event_name|Ballon d'Or|Stores the name of the event|
+|sponsor|Socios|Store the name of the sponsor||
+|award|Golden Ball|Stores the name of the award||
+|prizes|Golden Ball trophy|Stores the prizes that a player will have from the award||
 
 
 ## 3rd Normalization Form
